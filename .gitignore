@@ -1,0 +1,14 @@
+/vendor/
+/node_modules/
+/js/node_modules/
+/js/dist-typings/
+/.phpunit.cache/
+/tests/tmp/
+/composer.lock
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*

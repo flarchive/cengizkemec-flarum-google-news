@@ -1,0 +1,175 @@
+cengizkemec-google-news:
+  admin:
+    title: Google News
+    description: Configure Google News sitemaps, structured data, feeds and SEO metadata for your public articles.
+    sections:
+      general: General settings
+      sitemap: Sitemap settings
+      feeds: Feed settings
+      structured_data: Structured data
+      seo: SEO settings
+      publishing: Default publishing behavior
+      status: System status
+    settings:
+      enabled_label: Enable Flarum Google News
+      enabled_help: Turn all public Google News endpoints, structured data and metadata on or off.
+      fof_blog_label: Enable FoF Blog integration
+      fof_blog_help: Use FriendsOfFlarum Blog articles as news candidates and generate BlogPosting data. FoF Blog remains optional.
+      default_language_label: Default content language
+      default_language_help: "ISO 639-1 language code, for example en or tr. Leave empty to use the forum locale."
+      publisher_name_label: Publisher name
+      publisher_name_help: Used in the Google News sitemap, RSS/Atom feeds and Organization structured data.
+      publisher_website_label: Publisher website
+      publisher_website_help: Absolute publisher URL, for example https://example.com. Defaults to the forum URL.
+      publisher_country_label: Publisher country
+      publisher_country_help: Optional ISO 3166-1 alpha-2 country code, for example US or TR.
+      publisher_logo_label: Publisher logo
+      publisher_logo_help: "Upload a raster logo (PNG/JPEG/WebP). Google recommends a square or rectangular logo that is at least 600px wide."
+      publisher_logo_url_label: Publisher logo URL
+      publisher_logo_url_help: Optional absolute image URL. Takes precedence over an uploaded logo.
+      default_author_label: Default author
+      default_author_help: Used when an article has no author information.
+      sitemap_enabled_label: Enable Google News sitemap
+      sitemap_enabled_help: Serves /news-sitemap.xml with eligible news articles from the configured publishing window.
+      content_sitemap_enabled_label: Enable general content sitemap
+      content_sitemap_enabled_help: Serves /google-news-sitemap.xml without replacing an existing sitemap extension. Add it to your sitemap index if needed.
+      cache_duration_label: Cache duration (seconds)
+      cache_duration_help: Generated sitemap and feed documents are cached for this many seconds and invalidated when content changes.
+      news_window_label: Publishing window (hours)
+      news_window_help: Google News sitemaps should only contain articles published in the last 48 hours. Values above 48 are capped.
+      max_news_entries_label: Maximum news entries
+      max_news_entries_help: Maximum number of URLs in the Google News sitemap. Google allows up to 1,000.
+      content_max_urls_label: Maximum content sitemap URLs
+      content_max_urls_help: Maximum number of URLs in the general content sitemap.
+      rss_enabled_label: Enable RSS feed
+      rss_enabled_help: Serves a standards-compliant RSS 2.0 feed at /news-feed.xml.
+      atom_enabled_label: Enable Atom feed
+      atom_enabled_help: Serves a standards-compliant Atom 1.0 feed at /news-atom.xml.
+      feed_limit_label: Feed item limit
+      feed_limit_help: Maximum number of articles in each feed.
+      feed_description_label: Feed description
+      feed_description_help: Optional channel description. Defaults to the forum description.
+      include_regular_posts_label: Include regular blog posts in feeds
+      include_regular_posts_help: Include public blog posts that are not marked as news. News-only feeds can disable this.
+      schema_news_article_label: Enable NewsArticle structured data
+      schema_news_article_help: Generate Schema.org NewsArticle JSON-LD for articles marked as news.
+      schema_blog_posting_label: Enable BlogPosting structured data
+      schema_blog_posting_help: Generate Schema.org BlogPosting JSON-LD for regular blog posts.
+      schema_article_label: Enable Article structured data
+      schema_article_help: Generate Schema.org Article JSON-LD for other explicitly marked content.
+      schema_organization_label: Enable Organization structured data
+      schema_organization_help: Add the publisher Organization node to the JSON-LD graph.
+      schema_website_label: Enable WebSite structured data
+      schema_website_help: Add the WebSite node to the JSON-LD graph.
+      schema_breadcrumb_label: Enable BreadcrumbList structured data
+      schema_breadcrumb_help: Add a BreadcrumbList for article pages.
+      compatibility_mode_label: Respect existing SEO extensions
+      compatibility_mode_help: Skip Open Graph, Twitter and JSON-LD output when another SEO extension already generated those tags. Canonical URLs and basic metadata are still kept consistent.
+      open_graph_label: Enable Open Graph
+      open_graph_help: Add Open Graph title, description, image, URL and article metadata.
+      open_graph_type_label: Open Graph type
+      open_graph_type_help: Use article for article pages. Choose website only for non-article home or landing pages.
+      open_graph_type_options:
+        article: Article
+        website: Website
+      twitter_label: Enable Twitter Cards
+      twitter_help: Add Twitter Card metadata.
+      canonical_label: Enable canonical metadata
+      canonical_help: Output a single canonical URL for article pages.
+      description_label: Enable meta descriptions
+      description_help: Output a server-rendered meta description for article pages.
+      robots_label: Robots metadata
+      robots_help: Robots value applied to article pages. Use noindex only if you understand the consequences.
+      robots_options:
+        index_follow: index, follow
+        index_nofollow: index, nofollow
+        noindex_follow: noindex, follow
+        noindex_nofollow: noindex, nofollow
+      defaults_is_news_label: Mark new articles as news by default
+      defaults_is_news_help: Only apply this if your community publishes news regularly. Regular posts remain BlogPosting.
+      defaults_structured_data_label: Enable structured data for new news articles
+      defaults_structured_data_help: Whether the per-post structured data toggle starts enabled.
+      defaults_sitemap_label: Include new news articles in the sitemap by default
+      defaults_sitemap_help: The 48-hour window and publication checks still apply.
+      defaults_feed_label: Include new articles in feeds by default
+      defaults_feed_help: Controls the per-post feed toggle for newly created news metadata.
+    status:
+      heading: System status
+      refresh: Refresh status
+      clear_cache: Clear generated caches
+      loading: Loading status…
+      load_failed: The system status could not be loaded.
+      enabled: Enabled
+      disabled: Disabled
+      installed: Installed
+      not_installed: Not installed
+      version: Version
+      cached: Cached
+      not_cached: Not cached
+      document: Document
+      entries: Entries
+      last_refresh: Last successful cache refresh
+      never: Never
+      stale: Stale
+      fresh: Fresh
+      no_errors: No recent errors
+      recent_errors: Recent errors
+      compatibility: Compatibility
+      cache_store: Cache store
+      seo_extensions: Detected SEO extensions
+      none: None
+      endpoints: Public endpoints
+      resources: Google resources
+      search_console: Google Search Console
+      publisher_center: Google Publisher Center
+      news_sitemap_docs: News sitemap documentation
+      news_sitemap: Google News sitemap
+      content_sitemap: General content sitemap
+      structured_data: Structured data
+      rss: RSS feed
+      atom: Atom feed
+      cache_cleared: Generated caches were cleared.
+      status_loaded: Status refreshed.
+    permissions:
+      manage: Manage Google News publishing settings
+    links:
+      github: Project homepage
+  forum:
+    google_news: Google News
+    controls:
+      settings: Google News settings
+    modal:
+      title: Google News settings
+      intro: These settings only affect how this article is represented to Google News, sitemaps and feeds.
+      fields:
+        is_news: Mark this article as a news article
+        is_news_help: News articles use NewsArticle structured data and can appear in the Google News sitemap.
+        structured_data: Enable structured data
+        structured_data_help: Disable this only if another extension already provides structured data for this article.
+        sitemap: Include in the Google News sitemap
+        sitemap_help: Requires a news article published within the configured 48-hour window.
+        feed: Include in RSS and Atom feeds
+        feed_help: Public articles only.
+        headline: Custom news headline
+        headline_help: Optional. Maximum 200 characters. Google recommends up to 110 characters.
+        description: Custom news description
+        description_help: Optional summary used in sitemaps, feeds and metadata.
+        category: News category
+        category_help: Optional section or category label.
+        language: Content language
+        language_help: "Optional ISO 639-1 code, for example en or tr."
+        cover_image: Custom cover image URL
+        cover_image_help: Absolute HTTP(S) image URL. The blog cover image is used when empty.
+        author_name: Custom author name
+        author_name_help: Overrides the article author in structured data and feeds.
+        author_url: Custom author URL
+        author_url_help: Optional absolute profile or author page URL.
+      save: Save Google News settings
+      saved: Google News settings saved.
+      error: The Google News settings could not be saved.
+  lib:
+    home: Home
+    blog: Blog
+    invalid_url: The :attribute must be an absolute HTTP or HTTPS URL.
+    invalid_language: The :attribute must be a valid language code such as en or tr.
+    not_found: Not found.

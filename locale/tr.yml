@@ -1,0 +1,175 @@
+cengizkemec-google-news:
+  admin:
+    title: Google Haberler
+    description: Genel makaleleriniz için Google Haberler site haritalarını, yapılandırılmış verileri, beslemeleri ve SEO üst verilerini yapılandırın.
+    sections:
+      general: Genel ayarlar
+      sitemap: Site haritası ayarları
+      feeds: Besleme ayarları
+      structured_data: Yapılandırılmış veri
+      seo: SEO ayarları
+      publishing: Varsayılan yayın davranışı
+      status: Sistem durumu
+    settings:
+      enabled_label: Flarum Google Haberler'i etkinleştir
+      enabled_help: Tüm genel Google Haberler uç noktalarını, yapılandırılmış verileri ve üst verileri açın veya kapatın.
+      fof_blog_label: FoF Blog entegrasyonunu etkinleştir
+      fof_blog_help: FriendsOfFlarum Blog makalelerini haber adayı olarak kullanın ve BlogPosting verisi üretin. FoF Blog isteğe bağlıdır.
+      default_language_label: Varsayılan içerik dili
+      default_language_help: "ISO 639-1 dil kodu, örneğin en veya tr. Forum dilini kullanmak için boş bırakın."
+      publisher_name_label: Yayıncı adı
+      publisher_name_help: Google Haberler site haritasında, RSS/Atom beslemelerinde ve Organization yapılandırılmış verisinde kullanılır.
+      publisher_website_label: Yayıncı web sitesi
+      publisher_website_help: Tam yayıncı adresi, örneğin https://example.com. Varsayılan olarak forum adresi kullanılır.
+      publisher_country_label: Yayıncı ülkesi
+      publisher_country_help: İsteğe bağlı ISO 3166-1 alpha-2 ülke kodu, örneğin US veya TR.
+      publisher_logo_label: Yayıncı logosu
+      publisher_logo_help: "Raster bir logo yükleyin (PNG/JPEG/WebP). Google en az 600 piksel genişliğinde kare veya dikdörtgen bir logo önerir."
+      publisher_logo_url_label: Yayıncı logo adresi
+      publisher_logo_url_help: İsteğe bağlı tam görsel adresi. Yüklenen logodan önce gelir.
+      default_author_label: Varsayılan yazar
+      default_author_help: Makalede yazar bilgisi yoksa kullanılır.
+      sitemap_enabled_label: Google Haberler site haritasını etkinleştir
+      sitemap_enabled_help: Yapılandırılan yayın aralığındaki uygun haber makalelerini /news-sitemap.xml adresinde sunar.
+      content_sitemap_enabled_label: Genel içerik site haritasını etkinleştir
+      content_sitemap_enabled_help: Mevcut bir site haritası eklentisinin yerini almadan /google-news-sitemap.xml adresini sunar. Gerekirse site haritası dizininize ekleyin.
+      cache_duration_label: Önbellek süresi (saniye)
+      cache_duration_help: Oluşturulan site haritaları ve beslemeler bu süre boyunca önbellekte tutulur ve içerik değiştiğinde geçersiz kılınır.
+      news_window_label: Yayın aralığı (saat)
+      news_window_help: Google Haberler site haritaları yalnızca son 48 saatte yayınlanan makaleleri içermelidir. 48'in üzerindeki değerler sınırlandırılır.
+      max_news_entries_label: Maksimum haber girdisi
+      max_news_entries_help: Google Haberler site haritasındaki maksimum URL sayısı. Google 1.000'e kadar izin verir.
+      content_max_urls_label: Maksimum içerik site haritası URL'si
+      content_max_urls_help: Genel içerik site haritasındaki maksimum URL sayısı.
+      rss_enabled_label: RSS beslemesini etkinleştir
+      rss_enabled_help: /news-feed.xml adresinde standartlara uygun bir RSS 2.0 beslemesi sunar.
+      atom_enabled_label: Atom beslemesini etkinleştir
+      atom_enabled_help: /news-atom.xml adresinde standartlara uygun bir Atom 1.0 beslemesi sunar.
+      feed_limit_label: Besleme öğe sınırı
+      feed_limit_help: Her beslemedeki maksimum makale sayısı.
+      feed_description_label: Besleme açıklaması
+      feed_description_help: İsteğe bağlı kanal açıklaması. Varsayılan olarak forum açıklaması kullanılır.
+      include_regular_posts_label: Normal blog yazılarını beslemelere dahil et
+      include_regular_posts_help: Haber olarak işaretlenmemiş genel blog yazılarını dahil edin. Yalnızca haber beslemesi isteyenler bunu kapatabilir.
+      schema_news_article_label: NewsArticle yapılandırılmış verisini etkinleştir
+      schema_news_article_help: Haber olarak işaretlenen makaleler için Schema.org NewsArticle JSON-LD üretir.
+      schema_blog_posting_label: BlogPosting yapılandırılmış verisini etkinleştir
+      schema_blog_posting_help: Normal blog yazıları için Schema.org BlogPosting JSON-LD üretir.
+      schema_article_label: Article yapılandırılmış verisini etkinleştir
+      schema_article_help: Açıkça işaretlenen diğer içerikler için Schema.org Article JSON-LD üretir.
+      schema_organization_label: Organization yapılandırılmış verisini etkinleştir
+      schema_organization_help: JSON-LD grafiğine yayıncı Organization düğümünü ekler.
+      schema_website_label: WebSite yapılandırılmış verisini etkinleştir
+      schema_website_help: JSON-LD grafiğine WebSite düğümünü ekler.
+      schema_breadcrumb_label: BreadcrumbList yapılandırılmış verisini etkinleştir
+      schema_breadcrumb_help: Makale sayfaları için BreadcrumbList ekler.
+      compatibility_mode_label: Mevcut SEO eklentilerine saygı göster
+      compatibility_mode_help: Başka bir SEO eklentisi bu etiketleri zaten oluşturduysa Open Graph, Twitter ve JSON-LD çıktısını atlar. Kanonik URL'ler ve temel üst veriler yine tutarlı tutulur.
+      open_graph_label: Open Graph'ı etkinleştir
+      open_graph_help: Open Graph başlık, açıklama, görsel, URL ve makale üst verilerini ekler.
+      open_graph_type_label: Open Graph türü
+      open_graph_type_help: Makale sayfaları için article kullanın. Yalnızca makale olmayan ana sayfa veya açılış sayfaları için website seçin.
+      open_graph_type_options:
+        article: Makale
+        website: Web sitesi
+      twitter_label: Twitter Kartlarını etkinleştir
+      twitter_help: Twitter Card üst verilerini ekler.
+      canonical_label: Kanonik üst veriyi etkinleştir
+      canonical_help: Makale sayfaları için tek bir kanonik URL çıktılar.
+      description_label: Meta açıklamaları etkinleştir
+      description_help: Makale sayfaları için sunucu tarafında oluşturulan meta açıklama çıktılar.
+      robots_label: Robots üst verisi
+      robots_help: Makale sayfalarına uygulanan robots değeri. Sonuçlarını anlamıyorsanız noindex kullanmayın.
+      robots_options:
+        index_follow: index, follow
+        index_nofollow: index, nofollow
+        noindex_follow: noindex, follow
+        noindex_nofollow: noindex, nofollow
+      defaults_is_news_label: Yeni makaleleri varsayılan olarak haber işaretle
+      defaults_is_news_help: Yalnızca topluluğunuz düzenli olarak haber yayınlıyorsa uygulayın. Normal gönderiler BlogPosting olarak kalır.
+      defaults_structured_data_label: Yeni haber makaleleri için yapılandırılmış veriyi etkinleştir
+      defaults_structured_data_help: Gönderi başına yapılandırılmış veri anahtarının başlangıçta açık olup olmadığını belirler.
+      defaults_sitemap_label: Yeni haber makalelerini varsayılan olarak site haritasına ekle
+      defaults_sitemap_help: 48 saatlik aralık ve yayın kontrolleri yine uygulanır.
+      defaults_feed_label: Yeni makaleleri varsayılan olarak beslemelere ekle
+      defaults_feed_help: Yeni oluşturulan haber üst verileri için gönderi başına besleme anahtarını kontrol eder.
+    status:
+      heading: Sistem durumu
+      refresh: Durumu yenile
+      clear_cache: Oluşturulan önbellekleri temizle
+      loading: Durum yükleniyor…
+      load_failed: Sistem durumu yüklenemedi.
+      enabled: Etkin
+      disabled: Devre dışı
+      installed: Yüklü
+      not_installed: Yüklü değil
+      version: Sürüm
+      cached: Önbellekte
+      not_cached: Önbellekte değil
+      document: Belge
+      entries: Girdi
+      last_refresh: Son başarılı önbellek yenilemesi
+      never: Hiç
+      stale: Eskimiş
+      fresh: Güncel
+      no_errors: Son hata yok
+      recent_errors: Son hatalar
+      compatibility: Uyumluluk
+      cache_store: Önbellek deposu
+      seo_extensions: Algılanan SEO eklentileri
+      none: Yok
+      endpoints: Genel uç noktalar
+      resources: Google kaynakları
+      search_console: Google Search Console
+      publisher_center: Google Publisher Center
+      news_sitemap_docs: Haber site haritası belgeleri
+      news_sitemap: Google Haberler site haritası
+      content_sitemap: Genel içerik site haritası
+      structured_data: Yapılandırılmış veri
+      rss: RSS beslemesi
+      atom: Atom beslemesi
+      cache_cleared: Oluşturulan önbellekler temizlendi.
+      status_loaded: Durum yenilendi.
+    permissions:
+      manage: Google Haberler yayın ayarlarını yönet
+    links:
+      github: Proje ana sayfası
+  forum:
+    google_news: Google Haberler
+    controls:
+      settings: Google Haberler ayarları
+    modal:
+      title: Google Haberler ayarları
+      intro: Bu ayarlar yalnızca bu makalenin Google Haberler, site haritaları ve beslemelerde nasıl temsil edileceğini etkiler.
+      fields:
+        is_news: Bu makaleyi haber makalesi olarak işaretle
+        is_news_help: Haber makaleleri NewsArticle yapılandırılmış verisini kullanır ve Google Haberler site haritasında görünebilir.
+        structured_data: Yapılandırılmış veriyi etkinleştir
+        structured_data_help: Yalnızca başka bir eklenti bu makale için zaten yapılandırılmış veri sağlıyorsa kapatın.
+        sitemap: Google Haberler site haritasına ekle
+        sitemap_help: Yapılandırılan 48 saatlik aralıkta yayınlanmış bir haber makalesi gerektirir.
+        feed: RSS ve Atom beslemelerine ekle
+        feed_help: Yalnızca genel makaleler.
+        headline: Özel haber başlığı
+        headline_help: İsteğe bağlı. En fazla 200 karakter. Google 110 karaktere kadar önerir.
+        description: Özel haber açıklaması
+        description_help: Site haritalarında, beslemelerde ve üst verilerde kullanılan isteğe bağlı özet.
+        category: Haber kategorisi
+        category_help: İsteğe bağlı bölüm veya kategori etiketi.
+        language: İçerik dili
+        language_help: "İsteğe bağlı ISO 639-1 kodu, örneğin en veya tr."
+        cover_image: Özel kapak görseli adresi
+        cover_image_help: Tam HTTP(S) görsel adresi. Boş bırakılırsa blog kapak görseli kullanılır.
+        author_name: Özel yazar adı
+        author_name_help: Yapılandırılmış veride ve beslemelerde makale yazarını değiştirir.
+        author_url: Özel yazar adresi
+        author_url_help: İsteğe bağlı tam profil veya yazar sayfası adresi.
+      save: Google Haberler ayarlarını kaydet
+      saved: Google Haberler ayarları kaydedildi.
+      error: Google Haberler ayarları kaydedilemedi.
+  lib:
+    home: Ana sayfa
+    blog: Blog
+    invalid_url: ":attribute tam bir HTTP veya HTTPS adresi olmalıdır."
+    invalid_language: ":attribute en veya tr gibi geçerli bir dil kodu olmalıdır."
+    not_found: Bulunamadı.
