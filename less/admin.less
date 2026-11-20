@@ -1,0 +1,105 @@
+.GoogleNewsPage {
+  .GoogleNewsSectionTitle {
+    margin: 34px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--control-bg);
+    font-size: 18px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .GoogleNewsSubTitle {
+    margin: 26px 0 10px;
+    font-size: 15px;
+  }
+
+  .GoogleNewsSectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 40px;
+    border-bottom: 1px solid var(--control-bg);
+
+    .GoogleNewsSectionTitle {
+      border-bottom: 0;
+      margin: 0;
+    }
+  }
+
+  .GoogleNewsSectionActions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .GoogleNewsPage-status {
+    padding-bottom: 40px;
+  }
+
+  .GoogleNewsStatus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .GoogleNewsStatus-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 16px;
+    border-radius: var(--border-radius);
+    background: var(--control-bg);
+    border-left: 4px solid var(--muted-color);
+
+    &--success {
+      border-left-color: var(--success-color);
+    }
+  }
+
+  .GoogleNewsStatus-label {
+    color: var(--muted-color);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .GoogleNewsTable {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 8px 10px;
+      text-align: left;
+      border-bottom: 1px solid var(--control-bg);
+    }
+
+    th {
+      color: var(--muted-color);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+
+  .GoogleNewsLinks,
+  .GoogleNewsErrors {
+    margin: 0;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+  .GoogleNewsLinks a {
+    word-break: break-all;
+  }
+
+  .GoogleNewsVersion {
+    margin-top: 24px;
+  }
+}

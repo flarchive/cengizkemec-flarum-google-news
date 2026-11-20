@@ -1,0 +1,99 @@
+{
+    "name": "cengizkemec/flarum-google-news",
+    "description": "Google News, structured data, sitemap and RSS/Atom integration for Flarum.",
+    "keywords": [
+        "flarum",
+        "google-news",
+        "seo",
+        "sitemap",
+        "rss",
+        "atom",
+        "news"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cengiz Kemec",
+            "email": "mail@cengizkemec.com.tr",
+            "homepage": "https://cengizkemec.com.tr/",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://cengizkemec.com.tr/",
+    "support": {
+        "issues": "https://github.com/cengizkemec/flarum-google-news/issues",
+        "source": "https://github.com/cengizkemec/flarum-google-news"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cengizkemec\\GoogleNews\\": "src/"
+        },
+        "exclude-from-classmap": [
+            "/tests/tmp/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cengizkemec\\GoogleNews\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.3",
+        "flarum/core": "^2.0.0",
+        "ext-json": "*",
+        "ext-libxml": "*"
+    },
+    "require-dev": {
+        "flarum/tags": "^2.0.0",
+        "flarum/testing": "^2.0.0",
+        "fof/blog": "^2.0.0@beta",
+        "fof/seo": "^4.0@beta",
+        "phpunit/phpunit": "^12.5"
+    },
+    "suggest": {
+        "fof/blog": "Adds a blog section whose articles can be published as Google News articles."
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Google News",
+            "category": "feature",
+            "optional-dependencies": [
+                "fof/blog",
+                "flarum/tags",
+                "fof/seo"
+            ],
+            "icon": {
+                "name": "fas fa-newspaper",
+                "backgroundColor": "#1a73e8",
+                "color": "#fff"
+            }
+        },
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        },
+        "sort-packages": true
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true,
+    "scripts": {
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "@php vendor/phpunit/phpunit/phpunit -c phpunit.unit.xml",
+        "test:integration": "@php vendor/phpunit/phpunit/phpunit -c phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all automated tests.",
+        "test:unit": "Runs the unit test suite.",
+        "test:integration": "Runs the Flarum integration test suite.",
+        "test:setup": "Creates the SQLite database used by integration tests."
+    }
+}
